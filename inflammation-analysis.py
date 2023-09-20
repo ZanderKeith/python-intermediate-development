@@ -17,7 +17,6 @@ def main(args):
     if not isinstance(in_files, list):
         in_files = [args.in_files]
 
-
     for filename in in_files:
         inflammation_data = models.load_csv(filename)
 
@@ -28,6 +27,7 @@ def main(args):
         }
 
         views.visualize(view_data)
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
