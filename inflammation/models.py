@@ -14,12 +14,16 @@ def load_csv(filename):
     """Load a Numpy array from a CSV
 
     :param filename: Filename of CSV to load
+    :returns: Numpy array of data
     """
     return np.loadtxt(fname=filename, delimiter=',')
 
 
 def daily_mean(data):
-    """Calculate the daily mean of a 2D inflammation data array."""
+    """Calculate the daily mean of a 2D inflammation data array.
+    
+    :param data: data array
+    """
     return np.mean(data, axis=0)
 
 
